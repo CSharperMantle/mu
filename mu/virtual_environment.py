@@ -268,7 +268,7 @@ class Pip(object):
         """
         if isinstance(packages, str):
             return self.run(
-                "install", packages, wait_for_s=180.0, slots=slots, **kwargs
+                "install", packages, wait_for_s=1360.0, slots=slots, **kwargs
             )
         else:
             return self.run(

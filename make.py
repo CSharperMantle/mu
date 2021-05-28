@@ -107,12 +107,14 @@ def coverage():
     """
     print("\ncoverage")
     os.environ["LANG"] = "en_GB.utf8"
+    os.environ["MU_LOG_TO_STDOUT"] = "1"
     return subprocess.run(
         [
             sys.executable,
             "-m",
             PYTEST,
             "-v",
+            "-s",
             "--cov-config",
             ".coveragerc",
             "--cov-report",
